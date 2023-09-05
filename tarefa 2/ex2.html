@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <div style="font-size:15;" id="conteudo">
+
+    </div>
+</body>
+<script language="JavaScript" type="text/JavaScript" >
+    let tempo;
+    texto = document.getElementById("conteudo");
+setInterval(() => {
+    relogio()
+}, 1000);
+
+
+function relogio() {
+    data = new Date();
+    horas = data.getHours();
+    minutos = data.getMinutes();
+    segundos = data.getSeconds();
+    horas = horas < 10 ? `0${horas}` : horas;
+    minutos = minutos < 10 ? `0${minutos}` : minutos;
+    segundos = segundos < 10 ? `0${segundos}` : segundos;
+    
+    texto.innerHTML = `${horas}:${minutos}:${segundos}`;
+}
+</script>
+</html>

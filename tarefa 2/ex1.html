@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <div style="font-size:15;" id="conteudo">
+
+    </div>
+</body>
+
+<script language="JavaScript" type="text/JavaScript">
+    data = new Date();
+    texto = document.getElementById("conteudo");
+    dias_s = new Array("Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado");
+    meses = new Array("Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+    dia = data.getDate();
+    dia_s = dias_s[data.getDay()];
+    mes = meses[data.getMonth()];
+    ano = data.getFullYear();
+    texto.innerHTML = `${dia_s}, ${dia} de ${mes} de ${ano} `;
+
+</script>
+
+</html>

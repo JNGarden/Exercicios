@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <div id="conteudo">
+        <form >
+            <label for="palavra">Digite uma palavra para ver se é um palíndromo</label>
+            <input id="palavra" type="text">
+        </form>
+        <button onclick="palindromo()">Enviar</button>
+        <div id="resposta">
+
+        </div>
+    </div>
+</body>
+<script language="JavaScript" type="text/JavaScript" >
+
+function palindromo() {
+    palavra = document.getElementById("palavra").value;
+    reverte = palavra.split('').reverse().join('');
+    if(palavra == reverte){
+        resposta = document.getElementById("resposta");
+        resposta.innerHTML = "É um palíndromo";
+    }
+    else{
+        resposta.innerHTML = "Não é um palíndromo";
+    }
+}
+</script>
+</html>
